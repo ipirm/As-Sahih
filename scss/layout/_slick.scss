@@ -1,0 +1,79 @@
+.slider {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.prev,
+.next {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	color: #fff;
+	border: none;
+	background-color: #d6cfe5;
+	border-radius: 50%;
+	z-index: 100;
+	@include media("<phone") {
+		visibility: hidden;
+	}
+}
+
+.prev {
+	top: 44%;
+	left: -24px;
+	@include media("<desktop") {
+		left: 0;
+	}
+}
+
+.next {
+	bottom: 44%;
+	right: -24px;
+	@include media("<desktop") {
+		right: 0;
+	}
+}
+
+#articles-slider {
+	.prev,
+	.next {
+		font-size: 2rem;
+		position: absolute;
+		color: #5fa467;
+		border: none;
+		z-index: 101;
+		background-color: transparent;
+	}
+
+	.prev {
+		top: 1860px;
+		left: 40%;
+		transform: translate(-50%, 0);
+		@include media("<tablet") {
+			top: 1822px;
+			transform: translate(-90%, 0);
+		}
+	}
+
+	.next {
+		bottom: -135px;
+		left: 58%;
+		transform: translate(-10%, 0);
+		@include media("<tablet") {
+			bottom: -115px;
+			transform: translate(10%, 0);
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		bottom: -146px;
+		color: #5fa467;
+		border: none;
+		z-index: 100;
+		background-color: transparent;
+		@include media("<tablet") {
+			bottom: -126px;
+		}
+	}
+}
